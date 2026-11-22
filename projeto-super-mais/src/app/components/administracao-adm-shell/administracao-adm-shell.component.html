@@ -1,0 +1,194 @@
+@if (autorizado) {
+<div class="adm-shell">
+
+<header class="adm-header">
+<div>
+<p class="eyebrow">Painel administrativo</p>
+<h1>Gerenciar produtos</h1>
+<p class="adm-user">Administrador: <strong>{{ admin()?.nome }}</strong> ({{ admin()?.email }})</p>
+</div>
+<button class="btn btn-secundario" id="logout-admin" type="button" (click)="sair()">Sair do painel</button>
+</header>
+
+<nav aria-label="Navegação administrativa" class="adm-nav">
+<button type="button" [class.ativa]="aba() === 'produtos'" (click)="mudarAba('produtos')">Produtos</button>
+<button type="button" [class.ativa]="aba() === 'login'" (click)="mudarAba('login')">Login</button>
+</nav>
+
+@if (aviso(); as a) {
+<div class="aviso" [class.aviso-ok]="a.tipo === 'ok'" [class.aviso-erro]="a.tipo === 'erro'" role="status">{{ a.texto }}</div>
+}
+
+@if (aba() === 'produtos') {
+
+<section aria-label="Resumo" class="stats">
+<article class="stat-card">
+<span>Produtos cadastrados</span>
+<strong id="total-produtos">{{ produtos().length }}</strong>
+</article>
+<article class="stat-card">
+<span>Produto selecionado</span>
+<strong>{{ produtoId() !== null ? 'ID ' + produtoId() : 'Nenhum' }}</strong>
+</article>
+</section>
+
+<main class="adm-layout">
+
+<section class="panel form-panel">
+<div class="panel-header">
+<h2>{{ selecionado() ? 'Editar produto' : 'Novo produto' }}</h2>
+</div>
+
+<form class="localizar" (ngSubmit)="localizarPorId()">
+<label for="product-lookup">Localizar produto pelo ID</label>
+<div class="localizar-linha">
+<input id="product-lookup" name="idBusca" inputmode="numeric" placeholder="Ex.: 1002" type="text" [(ngModel)]="idBusca"/>
+<button class="btn btn-secundario" type="submit">Carregar</button>
+</div>
+</form>
+
+<form id="product-form">
+
+@if (selecionado(); as s) {
+<p class="selecionado">Produto selecionado: <strong>ID {{ s.id }}</strong> — {{ s.nome }}</p>
+} @else {
+<p class="dica">Preencha os campos e clique em <strong>Adicionar produto</strong>. Para alterar um produto existente, clique em <strong>Editar</strong> na lista ou localize pelo ID.</p>
+}
+
+<label for="product-name">Nome do produto</label>
+<input id="product-name" name="nome" placeholder="Ex.: Furadeira Elétrica" required type="text" [(ngModel)]="nome"/>
+
+<div class="two-columns">
+<div>
+<label for="product-category">Categoria</label>
+<input id="product-category" name="categoria" placeholder="Ex.: Ferramentas" required type="text" [(ngModel)]="categoria"/>
+</div>
+<div>
+<label for="product-section">Seção</label>
+<select id="product-section" name="secao" [(ngModel)]="secao">
+<option value="Ferramentas">Ferramentas</option>
+<option value="Alimentos">Alimentos</option>
+<option value="Higiene">Higiene</option>
+<option value="Doces">Doces</option>
+</select>
+</div>
+</div>
+
+<div class="two-columns">
+<div>
+<label for="product-price">Preço</label>
+<input id="product-price" name="preco" placeholder="Ex.: 199,90" required type="text" [(ngModel)]="preco"/>
+</div>
+<div>
+<label for="product-image">Imagem</label>
+<input id="product-image" name="imagem" placeholder="Ex.: /original/ferramentas/imagens/furadeira.jpg" type="text" [(ngModel)]="imagem"/>
+</div>
+</div>
+
+<label for="product-description">Descrição</label>
+<input id="product-description" name="descricao" placeholder="Ex.: Furadeira de impacto 500W" type="text" [(ngModel)]="descricao"/>
+
+<div class="form-actions">
+<button class="btn btn-adicionar" id="btn-adicionar" type="button" [disabled]="!!selecionado()" (click)="adicionarProduto()">Adicionar produto</button>
+<button class="btn btn-atualizar" id="btn-atualizar" type="button" [disabled]="!selecionado()" (click)="atualizarRegistro()">Atualizar registro</button>
+<button class="btn btn-excluir" id="btn-excluir" type="button" [disabled]="!selecionado()" (click)="excluirSelecionado()">Excluir</button>
+</div>
+<button class="btn btn-secundario btn-largo" id="cancel-edit" type="button" (click)="limparFormulario()">Limpar formulário</button>
+</form>
+</section>
+
+<section class="panel list-panel">
+<div class="panel-header with-search">
+<h2>Produtos cadastrados</h2>
+<input aria-label="Buscar produto" id="product-search" placeholder="Buscar por nome, seção ou ID" type="search" (input)="atualizarBusca($event)"/>
+</div>
+<div aria-live="polite" class="product-list" id="product-list">
+@for (produto of produtosFiltrados(); track produto.id) {
+<article class="product-item" [class.escolhido]="produto.id === produtoId()">
+<img [src]="produto.imagem" [alt]="produto.nome" width="56" height="56"/>
+<div class="product-info">
+<div class="linha-titulo">
+<span class="id-pill">ID {{ produto.id }}</span>
+<strong>{{ produto.nome }}</strong>
+</div>
+<span class="detalhe">{{ produto.secao }} · {{ produto.marca }}</span>
+<span class="preco">{{ produto.preco | currency:'BRL' }}</span>
+@if (produto.descricao) {
+<span class="detalhe">{{ produto.descricao }}</span>
+}
+@if (produto.atualizadoEm) {
+<span class="detalhe">Atualizado em {{ produto.atualizadoEm | date:'dd/MM/yyyy HH:mm' }}</span>
+} @else if (produto.criadoEm) {
+<span class="detalhe">Adicionado em {{ produto.criadoEm | date:'dd/MM/yyyy HH:mm' }}</span>
+}
+</div>
+<div class="product-actions">
+<button class="btn btn-editar" type="button" (click)="editar(produto)">Editar</button>
+<button class="btn btn-excluir" type="button" (click)="excluir(produto)">Excluir</button>
+</div>
+</article>
+} @empty {
+<p class="vazio">Nenhum produto encontrado.</p>
+}
+</div>
+</section>
+
+</main>
+
+} @else {
+
+<main class="adm-layout adm-single">
+
+<section class="panel">
+<div class="panel-header">
+<h2>Sessão atual</h2>
+</div>
+<div class="sessao">
+<dl>
+<div><dt>Nome</dt><dd>{{ admin()?.nome }}</dd></div>
+<div><dt>E-mail</dt><dd>{{ admin()?.email }}</dd></div>
+<div><dt>Perfil</dt><dd>Administrador</dd></div>
+</dl>
+<p class="dica">Você está autenticado como administrador. A sessão vale até você sair ou reiniciar a API.</p>
+<button class="btn btn-secundario" type="button" (click)="sair()">Sair da conta</button>
+</div>
+</section>
+
+<section class="panel">
+<div class="panel-header">
+<h2>Usuários cadastrados ({{ usuarios().length }})</h2>
+</div>
+<div aria-live="polite" class="product-list" id="user-list">
+@for (usuario of usuarios(); track usuario.id) {
+<article class="product-item">
+<div class="product-info">
+<div class="linha-titulo">
+<span class="id-pill">ID {{ usuario.id }}</span>
+<strong>{{ usuario.nome }}</strong>
+</div>
+<span class="detalhe">{{ usuario.email }}</span>
+<span class="detalhe">
+<span class="badge" [class.badge-admin]="usuario.perfil === 'admin'">{{ usuario.perfil === 'admin' ? 'Administrador' : 'Cliente' }}</span>
+@if (usuario.criadoEm) {
+ · cadastrado em {{ usuario.criadoEm | date:'dd/MM/yyyy HH:mm' }}
+}
+</span>
+</div>
+<div class="product-actions">
+@if (usuario.perfil !== 'admin') {
+<button class="btn btn-excluir" type="button" (click)="excluirUsuario(usuario)">Excluir</button>
+}
+</div>
+</article>
+} @empty {
+<p class="vazio">Nenhum usuário encontrado.</p>
+}
+</div>
+</section>
+
+</main>
+
+}
+
+</div>
+}

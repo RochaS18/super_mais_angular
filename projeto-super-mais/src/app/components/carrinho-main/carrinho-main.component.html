@@ -1,0 +1,219 @@
+<main id="inicio">
+
+    <nav aria-label="Você está em" class="caminho">
+        Início <span aria-hidden="true">›</span>
+        <strong>Meu carrinho</strong>
+    </nav>
+
+    <section aria-labelledby="tituloPagina" class="titulo">
+        <div>
+            <h1 id="tituloPagina">Meu carrinho</h1>
+            <p aria-live="polite" id="textoItens">
+                {{ quantidadeTotal() }} itens selecionados
+            </p>
+        </div>
+
+        <p>Revise os produtos antes de finalizar sua compra.</p>
+    </section>
+
+    <div class="layout-carrinho">
+
+        <section aria-labelledby="tituloProdutos" class="card">
+
+            <div class="cabecalho-carrinho">
+                <h2 id="tituloProdutos">Produtos no carrinho</h2>
+
+                <button class="limpar" id="botaoLimpar" type="button" (click)="limparCarrinho()">
+                    Limpar carrinho
+                </button>
+            </div>
+
+            <div aria-live="polite" class="lista-produtos" id="listaProdutos">
+
+                @for (item of itens(); track item.id) {
+
+                <article class="produto">
+
+                    <div class="imagem-produto">
+                        <img [src]="item.imagem" [alt]="item.nome">
+                    </div>
+
+                    <div class="detalhes-produto">
+                        <h3>{{ item.nome }}</h3>
+                        <p>{{ item.preco | currency:'BRL' }}</p>
+                    </div>
+
+                    <div class="preco-unitario">
+                        {{ item.preco * item.quantidade | currency:'BRL' }}
+                    </div>
+
+                    <div class="quantidade">
+
+                        <button type="button" (click)="diminuirQuantidade(item.id)">
+                            −
+                        </button>
+
+                        <span>{{ item.quantidade }}</span>
+
+                        <button type="button" (click)="aumentarQuantidade(item.id)">
+                            +
+                        </button>
+
+                    </div>
+
+                    <button type="button" class="remover" (click)="removerProduto(item.id)">
+                        Remover
+                    </button>
+
+                </article>
+
+                } @empty {
+
+                <p>Seu carrinho está vazio.</p>
+
+                }
+
+            </div>
+
+            <a class="continuar-comprando" routerLink="/">
+                ← Continuar comprando
+            </a>
+
+        </section>
+
+        <aside aria-labelledby="tituloResumo" class="card resumo">
+
+            <h2 id="tituloResumo">Resumo do pedido</h2>
+
+            <div aria-live="polite" class="frete-gratis" id="avisoFrete">
+
+                <span aria-hidden="true" class="frete-icone">
+                    <img alt="" src="/original/higiene/icone/frete_gratis_icone.png" />
+                </span>
+
+                <div>
+                    @if (subtotal() === 0) {
+
+                    <strong id="tituloFrete">Calcule seu frete</strong>
+                    <span id="textoFrete">
+                        Adicione produtos ao carrinho.
+                    </span>
+
+                    } @else if (subtotal() >= 200) {
+
+                    <strong id="tituloFrete">
+                        Você ganhou frete grátis!
+                    </strong>
+                    <span id="textoFrete">
+                        Seu pedido atingiu R$ 200,00.
+                    </span>
+
+                    } @else {
+
+                    <strong id="tituloFrete">
+                        Falta pouco para o frete grátis!
+                    </strong>
+                    <span id="textoFrete">
+                        Faltam
+                        {{ 200 - subtotal() | currency:'BRL' }}
+                        para ganhar frete grátis.
+                    </span>
+
+                    }
+                </div>
+
+            </div>
+
+            <form class="cupom" id="formCupom" (submit)="$event.preventDefault(); aplicarCupom(campoCupom.value)">
+
+                <label class="visualmente-oculto" for="campoCupom">
+                    Código do cupom
+                </label>
+
+                <input #campoCupom autocomplete="off" id="campoCupom" placeholder="Insira seu cupom" type="text" />
+
+                <button type="submit">Aplicar</button>
+
+            </form>
+
+            <p aria-live="polite" class="mensagem-cupom" id="mensagemCupom">
+
+                @if (cupomDigitado() && desconto() > 0) {
+                Cupom aplicado com sucesso!
+                } @else if (cupomDigitado() && subtotal() < 50 && cupomDigitado().trim().toUpperCase()==='MERCADO6' ) {
+                    O pedido mínimo para este cupom é R$ 50,00. } @else if (cupomDigitado()) { Cupom inválido. } </p>
+
+                    <div class="linha-resumo">
+                        <span>Subtotal</span>
+                        <strong id="subtotal">
+                            {{ subtotal() | currency:'BRL' }}
+                        </strong>
+                    </div>
+
+                    <div class="linha-resumo desconto">
+                        <span>Descontos</span>
+                        <strong id="valorDesconto">
+                            {{ desconto() | currency:'BRL' }}
+                        </strong>
+                    </div>
+
+                    <div class="linha-resumo">
+                        <span>Entrega</span>
+                        <strong id="valorEntrega">
+                            {{ frete() | currency:'BRL' }}
+                        </strong>
+                    </div>
+
+                    <div class="total">
+                        <strong>Total</strong>
+                        <strong id="valorTotal">
+                            {{ total() | currency:'BRL' }}
+                        </strong>
+                    </div>
+
+                    <button class="finalizar" id="botaoFinalizar" type="button" [disabled]="quantidadeTotal() === 0"
+                        (click)="irParaPagamento()">
+                        Ir para o pagamento →
+                    </button>
+
+                    <p aria-live="polite" class="mensagem-checkout" id="mensagemCheckout">
+                    </p>
+
+                    <p class="compra-segura">
+                        <img alt="" aria-hidden="true" src="/original/higiene/icone/pagamento_seguro_icone.png" />
+                        Compra segura e protegida
+                    </p>
+
+        </aside>
+
+    </div>
+
+    <section aria-labelledby="tituloSugestoes" class="sugestoes">
+
+        <div class="cabecalho-sugestoes">
+            <div>
+                <p class="sobretitulo">SELEÇÃO PARA VOCÊ</p>
+                <h2 id="tituloSugestoes">Você também pode gostar</h2>
+                <p>Complete suas compras com estes produtos.</p>
+            </div>
+
+            <span aria-hidden="true" class="sugestoes-destaque"></span>
+        </div>
+
+        <div aria-live="polite" class="grade-sugestoes" id="listaSugestoes">
+
+            @for (produto of sugestoes; track produto.id) {
+
+            <app-produto categoria="doces" [produto]="produto">
+            </app-produto>
+
+            }
+
+        </div>
+
+        <p aria-live="polite" class="mensagem-sugestao" id="mensagemSugestao">
+        </p>
+
+    </section>
+
+</main>

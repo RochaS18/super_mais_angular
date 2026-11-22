@@ -1,0 +1,147 @@
+:host {
+    display: block;
+}
+
+/* =========================================
+   MENU PRINCIPAL
+========================================= */
+.main-menu {
+    min-height: 72px;
+    margin: 0 40px 30px;
+    padding: 8px 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    border-radius: 38px;
+    background: rgba(255, 255, 255, 0.58);
+    border: 1px solid rgba(255, 255, 255, 0.75);
+    box-shadow: 0 10px 30px rgba(26, 43, 55, 0.08);
+    backdrop-filter: blur(10px);
+}
+
+.menu-links {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    list-style: none;
+}
+
+.menu-links li a {
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 0 22px;
+    border-radius: 28px;
+    color: #303A42;
+    font-size: 15px;
+    transition: 0.25s;
+}
+
+.menu-links li:not(.active) a:hover {
+    background: rgba(39, 133, 122, 0.10);
+    color: #27857A;
+}
+
+.menu-links .active a {
+    color: white;
+    background: linear-gradient(135deg, #27857A, #17655D);
+    box-shadow: 0 7px 18px rgba(39, 133, 122, 0.25);
+}
+
+.menu-icon {
+    width: 22px;
+    height: 22px;
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+}
+
+.menu-icon img {
+    width: 21px;
+    height: 21px;
+    object-fit: contain;
+}
+
+/* Elementos extras do menu usados em outras páginas do site */
+.menu-divider {
+    width: 1px;
+    height: 35px;
+    margin-left: auto;
+    background: #C8CDD0;
+}
+
+.card-supermais {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-left: 10px;
+}
+
+.supermais-icon {
+    width: 42px;
+    height: 42px;
+    display: grid;
+    place-items: center;
+    border-radius: 10px;
+    background: #E2F1EF;
+    box-shadow: 0 4px 12px rgba(39, 133, 122, 0.15);
+}
+
+.supermais-icon img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+.supermais-text {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    white-space: nowrap;
+}
+
+.supermais-text strong {
+    color: #256D66;
+    font-size: 14px;
+}
+
+.supermais-text span {
+    color: #5C646A;
+    font-size: 12px;
+}
+
+.request-card {
+    min-width: 145px;
+    height: 44px;
+    margin-left: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    border-radius: 25px;
+    background: linear-gradient(135deg, #F8CF56, #F1B92D);
+    color: #2E332E;
+    font-size: 14px;
+    font-weight: bold;
+    box-shadow: 0 7px 18px rgba(243, 194, 87, 0.25);
+    transition: 0.25s;
+}
+
+.request-card:hover {
+    transform: translateY(-2px);
+}
+
+.button-arrow {
+    width: 18px;
+    height: 18px;
+    display: grid;
+    place-items: center;
+}
+
+.button-arrow img {
+    width: 17px;
+    height: 17px;
+    object-fit: contain;
+}

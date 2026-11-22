@@ -1,0 +1,88 @@
+<main class="pagina-pagamento">
+<div class="cabecalho-pagamento">
+<h2>Finalizar compra</h2>
+<p>Revise as informações e conclua seu pagamento com segurança.</p>
+</div>
+<div aria-label="Escolha a forma de pagamento" class="metodos-pagamento" role="group">
+<button aria-pressed="true" class="metodo-pagamento ativo" data-metodo="pix" type="button">
+<i aria-hidden="true" class="fa-brands fa-pix"></i>
+<span>Pix <small>Aprovação rápida</small></span>
+</button>
+<button aria-pressed="false" class="metodo-pagamento" data-metodo="cartao" type="button">
+<i aria-hidden="true" class="fa-regular fa-credit-card"></i>
+<span>Cartão de crédito <small>Preencha os dados</small></span>
+</button>
+</div>
+<section class="area-pagamento">
+<div class="visual-pix" id="visual-pix">
+<div aria-label="QR Code Pix demonstrativo" class="qrcode-pix" id="qrcode-pix" role="img"></div>
+<span class="selo-pix"><i class="fa-solid fa-bolt"></i> Pix demonstrativo</span>
+</div>
+<div class="visual-cartao" hidden="" id="visual-cartao">
+<div aria-label="Cartão de crédito em pré-visualização" class="cartao-frente">
+<div class="chip-cartao"></div>
+<p class="numero-cartao" id="numero-cartao">0000 0000 0000 0000</p>
+<div class="dados-cartao">
+<p>
+                            Titular
+                            <strong id="nome-cartao">NOME DO TITULAR</strong>
+</p>
+<p>
+                            Validade
+                            <span id="validade-cartao">MM/AA</span>
+</p>
+</div>
+</div>
+</div>
+<div class="detalhes-pix">
+<span class="etiqueta-pagamento">Pagamento instantâneo</span>
+<h3>Pague com Pix</h3>
+<p class="instrucao-pix">Abra o app do seu banco, escolha Pix e escaneie o QR Code ao lado.</p>
+<div class="valor-pix">
+<span>Total do pedido</span>
+<strong id="valor-pix">R$ 0,00</strong>
+</div>
+<label class="rotulo-codigo-pix" for="codigo-pix">Ou copie e cole o código Pix</label>
+<div class="linha-codigo-pix">
+<input aria-label="Código Pix demonstrativo" id="codigo-pix" readonly="" type="text"/>
+<button aria-label="Copiar código Pix" id="copiar-pix" type="button"><i class="fa-regular fa-copy"></i></button>
+</div>
+<small aria-live="polite" class="aviso-pix" id="mensagem-pix">Demonstração: nenhuma cobrança será
+                    processada.</small>
+<button class="botao-pagamento" id="simular-pix" type="button">Simular pagamento</button>
+</div>
+<div class="formulario-pagamento" hidden="" id="formulario-cartao">
+<h3>Pagamento com cartão</h3>
+<form id="formulario-pagamento" novalidate="">
+<label class="campo-pagamento" for="nome-cartao-input">
+                        Nome no cartão
+                        <input id="nome-cartao-input" maxlength="30" name="nome-cartao" placeholder="Seu nome completo" type="text"/>
+<span class="erro-pagamento" data-erro="nome"></span>
+</label>
+<label class="campo-pagamento" for="numero-cartao-input">
+                        Número do cartão
+                        <input id="numero-cartao-input" inputmode="numeric" maxlength="19" name="numero-cartao" placeholder="1234 5678 9012 3456" type="text"/>
+<span class="erro-pagamento" data-erro="numero"></span>
+</label>
+<div class="campos-pequenos">
+<label class="campo-pagamento" for="mes-cartao">
+                            Mês
+                            <input id="mes-cartao" inputmode="numeric" maxlength="2" name="mes-cartao" placeholder="MM" type="text"/>
+<span class="erro-pagamento" data-erro="mes"></span>
+</label>
+<label class="campo-pagamento" for="ano-cartao">
+                            Ano
+                            <input id="ano-cartao" inputmode="numeric" maxlength="2" name="ano-cartao" placeholder="YY" type="text"/>
+<span class="erro-pagamento" data-erro="ano"></span>
+</label>
+<label class="campo-pagamento" for="cvc-cartao-input">
+                            CVC
+                            <input id="cvc-cartao-input" inputmode="numeric" maxlength="3" name="cvc-cartao" placeholder="123" type="text"/>
+<span class="erro-pagamento" data-erro="cvc"></span>
+</label>
+</div>
+<button class="botao-pagamento" type="submit">Confirmar pagamento</button>
+</form>
+</div>
+</section>
+</main>

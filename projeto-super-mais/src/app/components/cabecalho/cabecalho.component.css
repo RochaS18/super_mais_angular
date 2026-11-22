@@ -1,0 +1,182 @@
+:host {
+    display: block;
+}
+
+/* =========================================
+   CABEÇALHO
+========================================= */
+.header {
+    min-height: 130px;
+    padding: 22px 50px;
+    display: grid;
+    grid-template-columns: 230px minmax(300px, 1fr) auto;
+    align-items: center;
+    gap: 50px;
+    background: transparent;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    width: 185px;
+}
+
+.logo img {
+    width: 100%;
+    max-height: 80px;
+    object-fit: contain;
+}
+
+/* ---------- Busca ---------- */
+.search-box {
+    width: 100%;
+}
+
+.search-box form {
+    width: 100%;
+    height: 58px;
+
+    display: flex;
+
+    padding: 4px;
+
+    border: 1px solid rgba(255, 255, 255, 0.75);
+    border-radius: 50px;
+
+    background: rgba(255, 255, 255, 0.50);
+
+    box-shadow: inset 0 0 0 1px rgba(180, 190, 200, 0.30), 0 5px 20px rgba(50, 65, 80, 0.05);
+    backdrop-filter: blur(8px);
+}
+
+.search-box input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 0 25px;
+    color: #253036;
+}
+
+.search-box input::placeholder {
+    color: #69737B;
+}
+
+.search-box button {
+    width: 52px;
+    height: 50px;
+    flex-shrink: 0;
+    border: none;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #4F88D1, #266AAE);
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+    display: grid;
+    place-items: center;
+    box-shadow: 0 6px 15px rgba(38, 106, 174, 0.25);
+    transition: 0.25s;
+}
+
+.search-box button img {
+    width: 20px;
+    height: 20px;
+}
+
+.search-box button:hover {
+    transform: scale(1.05);
+}
+
+/* ---------- Usuário e carrinho ---------- */
+.user-area {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.user-card,
+.cart-card {
+    min-height: 64px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 18px;
+    border-radius: 32px;
+    background: rgba(255, 255, 255, 0.45);
+    border: 1px solid rgba(255, 255, 255, 0.70);
+    box-shadow: 0 5px 18px rgba(35, 50, 60, 0.05);
+    transition: 0.25s;
+}
+
+.user-card:hover,
+.cart-card:hover {
+    transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.65);
+}
+
+.user-icon {
+    width: 34px;
+    height: 34px;
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+}
+
+.user-icon img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
+.user-text,
+.cart-text {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    white-space: nowrap;
+}
+
+.user-text strong,
+.cart-text strong {
+    font-size: 14px;
+}
+
+.user-text span,
+.cart-text span {
+    font-size: 12px;
+    color: #687078;
+}
+
+.cart-card {
+    padding-left: 15px;
+}
+
+.cart-icon {
+    position: relative;
+    width: 34px;
+    height: 34px;
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+}
+
+.cart-icon > img {
+    width: 29px;
+    height: 29px;
+    object-fit: contain;
+}
+
+.cart-count {
+    position: absolute;
+    top: -7px;
+    right: -8px;
+    width: 20px;
+    height: 20px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background: var(--amarelo, #F3C257);
+    color: #29323A;
+    font-size: 11px;
+    font-weight: bold;
+}

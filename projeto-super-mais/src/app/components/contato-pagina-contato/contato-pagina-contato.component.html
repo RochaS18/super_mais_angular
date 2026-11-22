@@ -1,0 +1,124 @@
+
+<main class="pagina-contato">
+    <section class="hero-contato">
+        <div class="cabecalho-contato">
+            <span class="etiqueta-contato">Atendimento de verdade</span>
+            <h2>Seu próximo projeto começa com uma boa conversa.</h2>
+            <p>Conte o que você precisa. A gente ajuda a encontrar a ferramenta certa, sem complicação.</p>
+        </div>
+
+        <div class="horario-destaque">
+            <span class="icone-atendimento">
+                <i class="fa-solid fa-headset"></i>
+            </span>
+            <div>
+                <strong>Estamos por aqui</strong>
+                <span>Segunda a sábado, das 8h às 18h</span>
+            </div>
+            <i aria-hidden="true" class="fa-solid fa-arrow-down seta-contato"></i>
+        </div>
+    </section>
+
+    <section class="grade-contato">
+        <div class="cartao-contato">
+            <div class="titulo-bloco-contato">
+                <span>01 / Atendimento</span>
+                <h3>Fale com a gente</h3>
+            </div>
+
+            <a class="informacao-contato" href="tel:+551133332026">
+                <strong><i class="fa-solid fa-phone"></i> Telefone</strong>
+                <span>(11) 3333-2026</span>
+            </a>
+
+            <a class="informacao-contato" href="mailto:contato&#64;supermais.com.br">
+                <strong><i class="fa-solid fa-envelope"></i> E-mail</strong>
+                <span>contato&#64;supermais.com.br</span>
+            </a>
+
+            <p class="informacao-contato">
+                <strong><i class="fa-solid fa-clock"></i> Horário</strong>
+                <span>Segunda a sábado, das 8h às 18h</span>
+            </p>
+
+            <form
+                class="formulario-contato"
+                id="formulario-contato"
+                #formulario
+                (submit)="enviarMensagem($event, formulario)"
+            >
+                <h4>Escreva para nossa equipe</h4>
+
+                <label for="nome">
+                    Nome
+                    <input
+                        id="nome"
+                        name="nome"
+                        placeholder="Seu nome"
+                        required
+                        type="text"
+                    />
+                </label>
+
+                <label for="email">
+                    E-mail
+                    <input
+                        id="email"
+                        name="email"
+                        placeholder="seu&#64;email.com"
+                        required
+                        type="email"
+                    />
+                </label>
+
+                <label for="mensagem">
+                    Mensagem
+                    <textarea
+                        id="mensagem"
+                        name="mensagem"
+                        placeholder="Como podemos ajudar?"
+                        required
+                        rows="4"
+                    ></textarea>
+                </label>
+
+                <button type="submit">Enviar mensagem</button>
+
+                <small aria-live="polite" id="mensagem-formulario">
+                    @if (mensagemEnviada) {
+                        Mensagem enviada! Em breve entraremos em contato.
+                    }
+                </small>
+            </form>
+        </div>
+
+        <div class="mapa-ficticio">
+            <div class="titulo-bloco-contato">
+                <span>02 / Visite a loja</span>
+                <h3>Um bom conselho também se encontra pessoalmente.</h3>
+            </div>
+
+            <div
+                aria-label="Mapa ilustrativo da localização da loja"
+                class="mapa"
+            >
+                <span class="rua rua-um"></span>
+                <span class="rua rua-dois"></span>
+                <span class="rua rua-tres"></span>
+                <span class="marcador">
+                    <i class="fa-solid fa-location-dot"></i>
+                </span>
+            </div>
+
+            <p class="aviso-mapa">
+                <i class="fa-solid fa-location-dot"></i>
+                Rua das Ferramentas, 150 - São Paulo, SP
+            </p>
+
+            <div class="nota-loja">
+                <i aria-hidden="true" class="fa-solid fa-screwdriver-wrench"></i>
+                <span>Precisa de ajuda para escolher? Nossa equipe está pronta para trocar uma ideia.</span>
+            </div>
+        </div>
+    </section>
+</main>

@@ -1,0 +1,54 @@
+.topo-aviso {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  min-height: 40px;
+  padding: 0 50px;
+  color: rgb(255 255 255 / 88%);
+  background: linear-gradient(90deg, #101d28, #142433, #1a2028);
+  font-size: 14px;
+}
+.topo-aviso strong {
+  color: var(--amarelo);
+}
+.informacao-frete,
+.links-topo,
+.links-topo a {
+  display: flex;
+  align-items: center;
+}
+.informacao-frete {
+  gap: 10px;
+}
+.informacao-frete img {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+.links-topo {
+  gap: 40px;
+}
+.links-topo a {
+  gap: 8px;
+  color: white;
+  text-decoration: none;
+  transition: color .25s;
+}
+.links-topo a:hover {
+  color: var(--amarelo);
+}
+.links-topo img {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+.topo-aviso {
+  min-height: 40px;
+  padding: 0 50px;
+  background: linear-gradient(90deg, #101d28, #142433, #1a2028);
+  font-size: 14px;
+}
+.topo-aviso strong {
+  color: #f3c257;
+}

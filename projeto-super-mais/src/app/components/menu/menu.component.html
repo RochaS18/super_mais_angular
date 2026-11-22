@@ -1,0 +1,12 @@
+<nav class="main-menu">
+  <ul class="menu-links">
+    @for (item of itens; track item.rotulo) {
+      <li routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+        <a [routerLink]="item.rota">
+          <span class="menu-icon"><img [src]="item.icone" alt="" aria-hidden="true"></span>
+          {{ item.rotulo }}
+        </a>
+      </li>
+    }
+  </ul>
+</nav>

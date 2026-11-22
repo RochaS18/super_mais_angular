@@ -1,0 +1,40 @@
+.modal-pagamento {
+    position: fixed;
+    inset: 0;
+    z-index: 20;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: rgba(18, 37, 45, 0.55);
+}
+.modal-pagamento.aberto {
+    display: flex;
+}
+.conteudo-modal {
+    position: relative;
+    width: min(390px, 100%);
+    padding: 32px;
+    border-radius: 10px;
+    text-align: center;
+    background: white;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+}
+.conteudo-modal h2 {
+    margin: 0 0 10px;
+    color: var(--verde);
+}
+.conteudo-modal p {
+    margin: 0;
+    color: var(--texto-secundario);
+}
+.fechar-modal {
+    position: absolute;
+    top: 10px;
+    right: 14px;
+    border: 0;
+    color: var(--texto-secundario);
+    background: transparent;
+    cursor: pointer;
+    font-size: 24px;
+}

@@ -1,0 +1,6 @@
+<app-barra-superior />
+<app-cabecalho (buscaAlterada)="pesquisar($event)" />
+<app-menu />
+<app-banner titulo="Alimentos" descricao="Tudo o que você precisa, com qualidade, variedade e os melhores preços para o seu dia a dia." imagemFundo="/original/imagem/alimentos.png" [estiloCategoria]="true" corTitulo="#1B2831" />
+<app-secao-produtos categoria="alimentos" titulo="Alimentos" [produtos]="produtosFiltrados()" />
+<app-rodape />

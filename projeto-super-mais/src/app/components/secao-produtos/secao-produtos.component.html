@@ -1,0 +1,34 @@
+<main class="secao_produtos">
+  <div class="conteudo_secao_produtos">
+
+    <div class="barra_ferramentas_produtos">
+      <div>
+        <h2>{{ titulo }}</h2>
+        <p class="quantidade_produtos">{{ produtos.length }} produtos encontrados</p>
+      </div>
+
+      <div class="caixa_ordenacao">
+        <label for="ordenar">Ordenar por</label>
+        <select id="ordenar" (change)="alterarOrdenacao($event)">
+          @if (categoria === 'doces') {
+            <option value="geral">Geral</option>
+            <option value="sobremesas">Sobremesas</option>
+            <option value="guloseimas">Guloseimas</option>
+            <option value="doces">Doces</option>
+          } @else {
+            <option value="geral">Mais relevantes</option>
+            <option value="menor">Menor preço</option>
+            <option value="maior">Maior preço</option>
+          }
+        </select>
+      </div>
+    </div>
+
+    <div class="grade_produtos">
+      @for (produto of produtosExibidos; track produto.id) {
+        <app-produto [produto]="produto" [categoria]="categoria" [class]="'categoria-' + categoria" />
+      }
+    </div>
+
+  </div>
+</main>

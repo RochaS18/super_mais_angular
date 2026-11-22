@@ -1,0 +1,34 @@
+
+<article class="cartao_produto">
+  @if (produto.desconto) {
+    <span class="selo_promocao">{{ produto.desconto }}% OFF</span>
+  }
+
+  <span class="favorito">
+    <i class="fa-regular fa-heart"></i>
+  </span>
+
+  <div class="imagem_produto">
+    <img [src]="produto.imagem" [alt]="produto.nome + ' ' + produto.marca + ' ' + produto.peso">
+  </div>
+
+  <h3>{{ produto.nome }}</h3>
+  <p class="detalhes_produto">{{ produto.marca }} · {{ produto.peso }}</p>
+
+  <p class="preco">
+    {{ produto.preco | currency:'BRL':'symbol':'1.2-2' }}
+    @if (produto.precoAntigo) {
+      <span class="preco_antigo">
+        {{ produto.precoAntigo | currency:'BRL':'symbol':'1.2-2' }}
+      </span>
+    }
+  </p>
+
+  <button
+    class="botao_adicionar_carrinho"
+    [class.added]="produtoAdicionado"
+    [disabled]="produtoAdicionado"
+    (click)="adicionarAoCarrinho()">
+    {{ produtoAdicionado ? 'Adicionado ✓' : 'Adicionar ao carrinho' }}
+  </button>
+</article>

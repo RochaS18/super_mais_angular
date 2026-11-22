@@ -1,0 +1,78 @@
+[
+  {
+    "id": 1,
+    "tipo": "excluido",
+    "produtoId": 12,
+    "produtoNome": "Chocolate Shot",
+    "dataHora": "2026-11-22T13:09:49-03:00",
+    "realizadoPor": "adim@gmail.com",
+    "resumo": "Produto excluído da seção Doces (R$ 8,66)",
+    "dados": {
+      "id": 12,
+      "nome": "Chocolate Shot",
+      "marca": "Lacta",
+      "peso": "80g",
+      "preco": 8.66,
+      "precoAntigo": 10.19,
+      "desconto": 15,
+      "imagem": "imgdoces/barra_shot.png",
+      "secao": "Doces"
+    }
+  },
+  {
+    "id": 2,
+    "tipo": "adicionado",
+    "produtoId": 3011,
+    "produtoNome": "teste",
+    "dataHora": "2026-11-22T13:35:46-03:00",
+    "realizadoPor": "adim@gmail.com",
+    "resumo": "Produto adicionado na seção Alimentos por R$ 10,00",
+    "dados": {
+      "id": 3011,
+      "marca": "Alimentos",
+      "peso": "",
+      "nome": "teste",
+      "preco": 10,
+      "imagem": "/original/carrinho/carrinho-supermais/carrinho-supermais/assets/images/produto-placeholder.svg",
+      "secao": "Alimentos",
+      "descricao": ".",
+      "criadoEm": "2026-11-22T13:35:46-03:00"
+    }
+  },
+  {
+    "id": 3,
+    "tipo": "excluido",
+    "produtoId": 1001,
+    "produtoNome": "Arroz Branco",
+    "dataHora": "2026-11-22T13:36:01-03:00",
+    "realizadoPor": "adim@gmail.com",
+    "resumo": "Produto excluído da seção Alimentos (R$ 22,90)",
+    "dados": {
+      "id": 1001,
+      "nome": "Arroz Branco",
+      "marca": "Tio João · 5kg",
+      "peso": "",
+      "preco": 22.9,
+      "precoAntigo": 29.9,
+      "desconto": 23,
+      "imagem": "/original/alimentos/imagens/arroz_branco_5kg-removebg-preview.png",
+      "secao": "Alimentos"
+    }
+  },
+  {
+    "id": 4,
+    "tipo": "atualizado",
+    "produtoId": 1002,
+    "produtoNome": "Feijão Carioca - teste",
+    "dataHora": "2026-11-22T13:36:20-03:00",
+    "realizadoPor": "adim@gmail.com",
+    "resumo": "Campos alterados: nome (Feijão Carioca → Feijão Carioca - teste)",
+    "alteracoes": [
+      {
+        "campo": "nome",
+        "antes": "Feijão Carioca",
+        "depois": "Feijão Carioca - teste"
+      }
+    ]
+  }
+]

@@ -1,0 +1,21 @@
+<app-barra-superior />
+
+<app-cabecalho (buscaAlterada)="pesquisar($event)" />
+
+<app-menu />
+
+<app-banner
+  titulo="Higiene e limpeza"
+  descricao="Tudo o que você precisa, com qualidade, variedade e os melhores preços para o seu dia a dia."
+  imagemFundo="/original/higiene/imagem/banner_higiene_limpeza.png"
+  [estiloCategoria]="true"
+  corTitulo="#1B2831"
+/>
+
+<app-secao-produtos
+  categoria="higiene"
+  titulo="Higiene e limpeza"
+  [produtos]="produtosFiltrados()"
+/>
+
+<app-rodape />

@@ -1,0 +1,198 @@
+/* O host preenche a célula da grade para que todos os cards da linha tenham a mesma altura */
+:host {
+    display: flex;
+}
+
+.cartao_produto {
+    flex: 1;
+    min-width: 0;
+    min-height: 260px;
+
+    position: relative;
+
+    padding: 15px;
+
+    border-radius: 15px;
+
+    background: white;
+
+    transition: 0.25s;
+
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    gap: 16px;
+}
+
+.cartao_produto:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 15px 35px rgba(26, 43, 55, 0.13);
+}
+
+.selo_promocao {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+
+    background: #226B65;
+    color: #fff;
+
+    font-size: 11px;
+    font-weight: bold;
+
+    padding: 4px 9px;
+    border-radius: 6px;
+}
+
+.favorito {
+    position: absolute;
+    top: 13px;
+    right: 13px;
+    color: #a1abad;
+    cursor: pointer;
+}
+
+.favorito:hover {
+    color: #e74c3c;
+    transform: scale(1.1);
+}
+
+.imagem_produto {
+    width: 100%;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin-bottom: -50px;
+}
+
+.imagem_produto img {
+    width: 800px;
+    height: 800px;
+    object-fit: contain;
+    margin-bottom: 18px;
+    margin-top: 20px;
+    transform: scale(2.8);
+}
+
+.cartao_produto h3 {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.detalhes_produto {
+    margin-top: 7px;
+    color: #6C747A;
+    font-size: 12px;
+}
+
+.preco {
+    margin-top: 8px;
+
+    font-size: 17px;
+    font-weight: bold;
+    color: #E07B1A;
+}
+
+.preco_antigo {
+    margin-left: 8px;
+
+    font-size: 12px;
+    font-weight: 400;
+    color: #B5BEC3;
+    text-decoration: line-through;
+}
+
+.botao_adicionar_carrinho {
+    width: 100%;
+    margin-top: 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    background: #F3C257;
+    color: #16222B;
+
+    border: none;
+    border-radius: 9px;
+    padding: 11px 0;
+
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.botao_adicionar_carrinho:hover {
+    background: #E5B548;
+}
+
+
+/* Dimensões isoladas por categoria, sem sobrescrever Doces. */
+:host(.categoria-alimentos) .imagem_produto img {width:auto;height:auto;max-width:100%;max-height:45px;transform:scale(2.8);margin:0;}
+:host(.categoria-higiene) .imagem_produto img {width:auto;height:auto;max-width:100%;max-height:145px;transform:none;margin:0;}
+:host(.categoria-ferramentas) .imagem_produto img {width:auto;height:175px;max-width:100%;max-height:175px;transform:none;margin:0;}
+
+/* Correção pontual: imagens de Higiene e Ferramentas permanecem dentro
+   do espaço visual do card, sem invadir o título. Doces não é alterado. */
+:host(.categoria-higiene) .imagem_produto,
+:host(.categoria-ferramentas) .imagem_produto {
+    height: 180px;
+    min-height: 180px;
+    margin-bottom: 0;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+:host(.categoria-higiene) .imagem_produto img,
+:host(.categoria-ferramentas) .imagem_produto img {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 155px;
+    object-fit: contain;
+    transform: none;
+    margin: 0;
+}
+:host(.categoria-higiene) .cartao_produto h3,
+:host(.categoria-ferramentas) .cartao_produto h3 {
+    margin-top: 0;
+}
+
+/* Round 3: área da foto separada do texto, sem deslocamento negativo. */
+:host(.categoria-higiene) .cartao_produto,
+:host(.categoria-ferramentas) .cartao_produto { gap: 12px; }
+:host(.categoria-higiene) .imagem_produto,
+:host(.categoria-ferramentas) .imagem_produto { height: 190px; min-height: 190px; margin-bottom: 0; }
+:host(.categoria-higiene) .imagem_produto img,
+:host(.categoria-ferramentas) .imagem_produto img { max-height: 160px; max-width: 90%; }
+:host(.categoria-higiene) .cartao_produto h3,
+:host(.categoria-ferramentas) .cartao_produto h3 { margin: 0; line-height: 1.4; min-height: 20px; }
+
+
+/* Round 4 — dimensões compartilhadas, sem zoom que invade outros elementos. */
+.cartao_produto {gap: 10px; min-height: 370px; padding: 16px;}
+.imagem_produto, :host(.categoria-higiene) .imagem_produto, :host(.categoria-ferramentas) .imagem_produto {height: 185px; min-height: 185px; margin: 0; flex-shrink: 0;}
+.imagem_produto img, :host(.categoria-alimentos) .imagem_produto img, :host(.categoria-higiene) .imagem_produto img, :host(.categoria-ferramentas) .imagem_produto img {width: auto; height: auto; max-width: 94%; max-height: 165px; object-fit: contain; transform: none; margin: 0;}
+.cartao_produto h3, :host(.categoria-higiene) .cartao_produto h3, :host(.categoria-ferramentas) .cartao_produto h3 {margin: 0; line-height: 1.35; min-height: 38px;}
+.detalhes_produto {margin: 0; min-height: 30px;}
+.preco {margin-top: auto;}
+.botao_adicionar_carrinho {margin-top: 8px;}
+
+
+/* Correção exclusiva da página de Doces */
+:host(:not(.categoria-alimentos):not(.categoria-higiene):not(.categoria-ferramentas)) .imagem_produto img {
+    transform: scale(2.8);
+}
+
+
+.botao_adicionar_carrinho.added {
+  background: #226B65;
+  color: #fff;
+  cursor: default;
+}

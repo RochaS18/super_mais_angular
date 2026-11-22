@@ -1,0 +1,8 @@
+<app-barra-superior />
+<app-cabecalho (buscaAlterada)="pesquisar($event)" />
+<app-menu />
+<app-banner titulo="Ferramentas" descricao="Tudo o que você precisa, com qualidade, variedade e os melhores preços para o seu dia a dia." imagemFundo="/original/ferramentas/imagens/oferta-1.png" [estiloCategoria]="true" corTitulo="#247E73" />
+<app-secao-produtos categoria="ferramentas" titulo="Ferramentas"[produtos]="produtosFiltrados()" />
+<app-rodape />
+
+

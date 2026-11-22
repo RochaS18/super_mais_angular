@@ -1,0 +1,10 @@
+<section class="banner_principal">
+  <div class="conteudo_banner_principal" [class.banner-categoria]="estiloCategoria" [style.background-image]="'url(' + imagemFundo + ')'">
+    <div class="texto_banner_principal">
+      <h1 [style.color]="corTitulo">{{ titulo }}</h1>
+      <p>{{ descricao }}</p>
+      <a [routerLink]="rotaBotao" class="botao_banner">{{ textoBotao }} <span>→</span></a>
+    </div>
+    <div class="imagem_banner_principal"></div>
+  </div>
+</section>

@@ -1,0 +1,902 @@
+{
+  "produtos": [
+    {
+      "id": 1001,
+      "nome": "Arroz Branco",
+      "marca": "Tio João · 5kg",
+      "peso": "",
+      "preco": 22.9,
+      "precoAntigo": 29.9,
+      "desconto": 23,
+      "imagem": "/original/alimentos/imagens/arroz_branco_5kg-removebg-preview.png",
+      "secao": "Alimentos"
+    },
+    {
+      "id": 1002,
+      "nome": "Feijão Carioca",
+      "marca": "Camil · 1kg",
+      "peso": "",
+      "preco": 7.49,
+      "precoAntigo": 9.9,
+      "desconto": 24,
+      "imagem": "/original/alimentos/imagens/feijao_carioca_camil_1kg-removebg-preview.png",
+      "secao": "Alimentos"
+    },
+    {
+      "id": 1003,
+      "nome": "Macarrão Espaguete",
+      "marca": "Adria · 500g",
+      "peso": "",
+      "preco": 4.29,
+      "precoAntigo": 5.99,
+      "desconto": 28,
+      "imagem": "/original/alimentos/imagens/macarra_espeguete_adria_500g-removebg-preview.png",
+      "secao": "Alimentos"
+    },
+    {
+      "id": 1004,
+      "nome": "Óleo de Soja",
+      "marca": "Liza · 900ml",
+      "peso": "",
+      "preco": 6.99,
+      "precoAntigo": 8.9,
+      "desconto": 21,
+      "imagem": "/original/alimentos/imagens/oleo_soja_900ml-removebg-preview.png",
+      "secao": "Alimentos"
+    },
+    {
+      "id": 1005,
+      "nome": "Açúcar Cristal",
+      "marca": "União · 1kg",
+      "peso": "",
+      "preco": 3.99,
+      "precoAntigo": 5.49,
+      "desconto": 27,
+      "imagem": "/original/alimentos/imagens/acucar_uniao_1kg-removebg-preview.png",
+      "secao": "Alimentos"
+    },
+    {
+      "id": 1006,
+      "nome": "Café Tradicional",
+      "marca": "Pilão · 500g",
+      "peso": "",
+      "preco": 16.9,
+      "precoAntigo": 21.9,
+      "desconto": 23,
+      "imagem": "/original/alimentos/imagens/cafe-uniao-tradicional-500g_104192-removebg-preview.png",
+      "secao": "Alimentos"
+    },
+    {
+      "id": 1007,
+      "nome": "Leite Integral",
+      "marca": "Itambé · 1L",
+      "peso": "",
+      "preco": 4.79,
+      "precoAntigo": 6.49,
+      "desconto": 26,
+      "imagem": "/original/alimentos/imagens/leite_integral_1l-removebg-preview.png",
+      "secao": "Alimentos"
+    },
+    {
+      "id": 1008,
+      "nome": "Farinha de Trigo",
+      "marca": "Renata · 1kg",
+      "peso": "",
+      "preco": 4.49,
+      "precoAntigo": 5.79,
+      "desconto": 22,
+      "imagem": "/original/alimentos/imagens/farinho_trigo_renata_1kg-removebg-preview.png",
+      "secao": "Alimentos"
+    },
+    {
+      "id": 1009,
+      "nome": "Molho de Tomate",
+      "marca": "Heinz · 340g",
+      "peso": "",
+      "preco": 5.29,
+      "precoAntigo": 6.99,
+      "desconto": 24,
+      "imagem": "/original/alimentos/imagens/molho_tomate_heinz_340g-removebg-preview.png",
+      "secao": "Alimentos"
+    },
+    {
+      "id": 1010,
+      "nome": "Maionese",
+      "marca": "Hellmann's · 500g",
+      "peso": "",
+      "preco": 12.9,
+      "precoAntigo": 16.9,
+      "desconto": 24,
+      "imagem": "/original/alimentos/imagens/maionese_hellmanns_500g-removebg-preview.png",
+      "secao": "Alimentos"
+    },
+    {
+      "id": 1011,
+      "nome": "Biscoito Recheado",
+      "marca": "Nestlé · 140g",
+      "peso": "",
+      "preco": 3.99,
+      "precoAntigo": 5.49,
+      "desconto": 27,
+      "imagem": "/original/alimentos/imagens/biscoito_recheado_140-removebg-preview.png",
+      "secao": "Alimentos"
+    },
+    {
+      "id": 1012,
+      "nome": "Refrigerante Coca-Cola",
+      "marca": "Coca-Cola · 2L",
+      "peso": "",
+      "preco": 8.49,
+      "precoAntigo": 11.9,
+      "desconto": 29,
+      "imagem": "/original/alimentos/imagens/coca_cola_2l-removebg-preview.png",
+      "secao": "Alimentos"
+    },
+    {
+      "id": 1013,
+      "nome": "Sal Refinado",
+      "marca": "Cisne · 1kg",
+      "peso": "",
+      "preco": 2.99,
+      "precoAntigo": 3.79,
+      "desconto": 21,
+      "imagem": "/original/alimentos/imagens/sal_refinado_cisne_1kg-removebg-preview.png",
+      "secao": "Alimentos"
+    },
+    {
+      "id": 1014,
+      "nome": "Margarina",
+      "marca": "Qually · 500g",
+      "peso": "",
+      "preco": 6.49,
+      "precoAntigo": 8.49,
+      "desconto": 24,
+      "imagem": "/original/alimentos/imagens/margarina_500-removebg-preview.png",
+      "secao": "Alimentos"
+    },
+    {
+      "id": 1015,
+      "nome": "Achocolatado em Pó",
+      "marca": "Nescau · 400g",
+      "peso": "",
+      "preco": 8.99,
+      "precoAntigo": 11.49,
+      "desconto": 22,
+      "imagem": "/original/alimentos/imagens/nescau_400-removebg-preview.png",
+      "secao": "Alimentos"
+    },
+    {
+      "id": 1,
+      "nome": "Mistura Para Bolo Sabor Festa",
+      "marca": "Dona Benta",
+      "peso": "450g",
+      "preco": 6.6,
+      "imagem": "imgdoces/bolo_festa.png",
+      "secao": "Doces"
+    },
+    {
+      "id": 2,
+      "nome": "Mistura Para Bolo Sabor Chocolate",
+      "marca": "Dona Benta",
+      "peso": "450g",
+      "preco": 7.49,
+      "imagem": "imgdoces/bolo_choco.png",
+      "secao": "Doces"
+    },
+    {
+      "id": 3,
+      "nome": "Mistura Para Bolo Sabor Coco",
+      "marca": "Dona Benta",
+      "peso": "450g",
+      "preco": 5.28,
+      "precoAntigo": 6.6,
+      "desconto": 20,
+      "imagem": "imgdoces/bolo_coco.png",
+      "secao": "Doces"
+    },
+    {
+      "id": 4,
+      "nome": "Mistura Para Bolo Sabor Laranja",
+      "marca": "Dona Benta",
+      "peso": "450g",
+      "preco": 6.6,
+      "imagem": "imgdoces/bolo_laranja.png",
+      "secao": "Doces"
+    },
+    {
+      "id": 5,
+      "nome": "Mistura Para Bolo Sabor Cenoura",
+      "marca": "Dona Benta",
+      "peso": "450g",
+      "preco": 4.95,
+      "precoAntigo": 6.6,
+      "desconto": 25,
+      "imagem": "imgdoces/bolo_cenoura.png",
+      "secao": "Doces"
+    },
+    {
+      "id": 6,
+      "nome": "Mistura Para Brownie",
+      "marca": "Dona Benta",
+      "peso": "450g",
+      "preco": 6.39,
+      "precoAntigo": 7.99,
+      "desconto": 20,
+      "imagem": "imgdoces/brownie.png",
+      "secao": "Doces"
+    },
+    {
+      "id": 7,
+      "nome": "Chocolate Ao Leite",
+      "marca": "Nestlé",
+      "peso": "80g",
+      "preco": 9.59,
+      "imagem": "imgdoces/barra_clasic.png",
+      "secao": "Doces"
+    },
+    {
+      "id": 8,
+      "nome": "Chocolate Alpino",
+      "marca": "Nestlé",
+      "peso": "80g",
+      "preco": 8.99,
+      "precoAntigo": 9.79,
+      "desconto": 10,
+      "imagem": "imgdoces/barra_alpino.png",
+      "secao": "Doces"
+    },
+    {
+      "id": 9,
+      "nome": "Chocolate Meio Amargo",
+      "marca": "Garoto",
+      "peso": "80g",
+      "preco": 7.49,
+      "imagem": "imgdoces/barra_amargo.png",
+      "secao": "Doces"
+    },
+    {
+      "id": 10,
+      "nome": "Chocolate Recheio Sonho de Valsa",
+      "marca": "Lacta",
+      "peso": "98g",
+      "preco": 9.07,
+      "precoAntigo": 10.19,
+      "desconto": 11,
+      "imagem": "imgdoces/barra_valsa.png",
+      "secao": "Doces"
+    },
+    {
+      "id": 11,
+      "nome": "Chocolate Recheio Ouro Branco",
+      "marca": "Lacta",
+      "peso": "98g",
+      "preco": 9.07,
+      "precoAntigo": 10.19,
+      "desconto": 11,
+      "imagem": "imgdoces/barra_ouro.png",
+      "secao": "Doces"
+    },
+    {
+      "id": 12,
+      "nome": "Chocolate Shot",
+      "marca": "Lacta",
+      "peso": "80g",
+      "preco": 8.66,
+      "precoAntigo": 10.19,
+      "desconto": 15,
+      "imagem": "imgdoces/barra_shot.png",
+      "secao": "Doces"
+    },
+    {
+      "id": 13,
+      "nome": "Chocolate KitKat Dark",
+      "marca": "Nestlé",
+      "peso": "41,5g",
+      "preco": 2.99,
+      "imagem": "imgdoces/kitkat_dark.png",
+      "secao": "Doces"
+    },
+    {
+      "id": 14,
+      "nome": "Chocolate KitKat White",
+      "marca": "Nestlé",
+      "peso": "41,5g",
+      "preco": 2.99,
+      "imagem": "imgdoces/kitkat_branco.png",
+      "secao": "Doces"
+    },
+    {
+      "id": 15,
+      "nome": "Chocolate Bis Extra",
+      "marca": "Lacta",
+      "peso": "45g",
+      "preco": 4.13,
+      "precoAntigo": 4.39,
+      "desconto": 5,
+      "imagem": "imgdoces/bis.png",
+      "secao": "Doces"
+    },
+    {
+      "id": 16,
+      "nome": "Chocolate Diamante Negro",
+      "marca": "Lacta",
+      "peso": "80g",
+      "preco": 8.99,
+      "imagem": "imgdoces/barra_diamante.png",
+      "secao": "Doces"
+    },
+    {
+      "id": 17,
+      "nome": "Chocolate Talento Meio Amargo",
+      "marca": "Garoto",
+      "peso": "85g",
+      "preco": 7.91,
+      "precoAntigo": 8.99,
+      "desconto": 12,
+      "imagem": "imgdoces/talento_amen.png",
+      "secao": "Doces"
+    },
+    {
+      "id": 18,
+      "nome": "Chocolate Talento Avelã",
+      "marca": "Garoto",
+      "peso": "85g",
+      "preco": 7.91,
+      "precoAntigo": 8.99,
+      "desconto": 12,
+      "imagem": "imgdoces/talento_avela.png",
+      "secao": "Doces"
+    },
+    {
+      "id": 19,
+      "nome": "Chocolate Branco Oreo",
+      "marca": "Lacta",
+      "peso": "80g",
+      "preco": 8.99,
+      "imagem": "imgdoces/barra_oreo.png",
+      "secao": "Doces"
+    },
+    {
+      "id": 20,
+      "nome": "Chocolate Choco Trio",
+      "marca": "Nestlé",
+      "peso": "90g",
+      "preco": 8.79,
+      "precoAntigo": 9.99,
+      "desconto": 12,
+      "imagem": "imgdoces/barra_trioB.png",
+      "secao": "Doces"
+    },
+    {
+      "id": 21,
+      "nome": "Chocolate Choco Trio Chocolate",
+      "marca": "Nestlé",
+      "peso": "90g",
+      "preco": 8.79,
+      "precoAntigo": 9.99,
+      "desconto": 12,
+      "imagem": "imgdoces/barra_trioP.png",
+      "secao": "Doces"
+    },
+    {
+      "id": 22,
+      "nome": "Chocolate Snickers Branco",
+      "marca": "Snickers",
+      "peso": "45g",
+      "preco": 4.49,
+      "imagem": "imgdoces/snicker_branco.png",
+      "secao": "Doces"
+    },
+    {
+      "id": 23,
+      "nome": "Bala Fini Dentaduras",
+      "marca": "Fini",
+      "peso": "80g",
+      "preco": 6,
+      "precoAntigo": 7.59,
+      "desconto": 31,
+      "imagem": "imgdoces/fini_dentadura.png",
+      "secao": "Doces"
+    },
+    {
+      "id": 24,
+      "nome": "Bala Fini Beijos Morango",
+      "marca": "Fini",
+      "peso": "80g",
+      "preco": 6,
+      "precoAntigo": 7.59,
+      "desconto": 31,
+      "imagem": "imgdoces/fini_beijo.png",
+      "secao": "Doces"
+    },
+    {
+      "id": 25,
+      "nome": "Bala Fini Minhocas Azedinhas",
+      "marca": "Fini",
+      "peso": "80g",
+      "preco": 6,
+      "precoAntigo": 7.59,
+      "desconto": 31,
+      "imagem": "imgdoces/fini_minhoca.png",
+      "secao": "Doces"
+    },
+    {
+      "id": 26,
+      "nome": "Bala Fini Bananas",
+      "marca": "Fini",
+      "peso": "80g",
+      "preco": 6,
+      "precoAntigo": 7.59,
+      "desconto": 31,
+      "imagem": "imgdoces/fini_banana.png",
+      "secao": "Doces"
+    },
+    {
+      "id": 27,
+      "nome": "Bala Fini Tubes Morango Azedinho",
+      "marca": "Fini",
+      "peso": "80g",
+      "preco": 6,
+      "precoAntigo": 7.59,
+      "desconto": 31,
+      "imagem": "imgdoces/fini_tubes.png",
+      "secao": "Doces"
+    },
+    {
+      "id": 28,
+      "nome": "Bala Fini Ursos",
+      "marca": "Fini",
+      "peso": "80g",
+      "preco": 6,
+      "precoAntigo": 7.59,
+      "desconto": 31,
+      "imagem": "imgdoces/fini_urso.png",
+      "secao": "Doces"
+    },
+    {
+      "id": 29,
+      "nome": "Marshmallow Torção",
+      "marca": "Fini",
+      "peso": "250g",
+      "preco": 12.93,
+      "imagem": "imgdoces/fini_torcao.png",
+      "secao": "Doces"
+    },
+    {
+      "id": 30,
+      "nome": "Bala Mentos Fruit",
+      "marca": "Mentos",
+      "peso": "37,5g",
+      "preco": 2.64,
+      "imagem": "imgdoces/mentos_frutas.png",
+      "secao": "Doces"
+    },
+    {
+      "id": 31,
+      "nome": "Bala Mentos Mint",
+      "marca": "Mentos",
+      "peso": "37,5g",
+      "preco": 2.64,
+      "imagem": "imgdoces/mentos_mint.png",
+      "secao": "Doces"
+    },
+    {
+      "id": 32,
+      "nome": "Chiclete Mentos Pure Fresh Morango",
+      "marca": "Mentos",
+      "peso": "90g",
+      "preco": 13.35,
+      "imagem": "imgdoces/chicle_morango.png",
+      "secao": "Doces"
+    },
+    {
+      "id": 33,
+      "nome": "Chiclete Mentos Pure Fresh Menta",
+      "marca": "Mentos",
+      "peso": "54g",
+      "preco": 12.99,
+      "imagem": "imgdoces/chicle_pmint.png",
+      "secao": "Doces"
+    },
+    {
+      "id": 34,
+      "nome": "Bolo Mesclado Cenoura com Chocolate",
+      "marca": "Casa de Bolos",
+      "peso": "900g",
+      "preco": 26,
+      "imagem": "imgdoces/bolo_formi.png",
+      "secao": "Doces"
+    },
+    {
+      "id": 35,
+      "nome": "Bolo Fubá com Limão Siciliano",
+      "marca": "Casa de Bolos",
+      "peso": "780g",
+      "preco": 28,
+      "imagem": "imgdoces/bolo_fuba.png",
+      "secao": "Doces"
+    },
+    {
+      "id": 36,
+      "nome": "Bolo Brigadeiro",
+      "marca": "Casa de Bolos",
+      "peso": "900g",
+      "preco": 44,
+      "imagem": "imgdoces/bolo_brigadeiro.png",
+      "secao": "Doces"
+    },
+    {
+      "id": 37,
+      "nome": "Confeito Granulado Macio Chocolate",
+      "marca": "Dr. Oetker",
+      "peso": "130g",
+      "preco": 8.49,
+      "imagem": "imgdoces/granu_trad.png",
+      "secao": "Doces"
+    },
+    {
+      "id": 38,
+      "nome": "Confeito Granulado Choc Bolinha",
+      "marca": "Dr. Oetker",
+      "peso": "80g",
+      "preco": 7.24,
+      "imagem": "imgdoces/granu_bol.png",
+      "secao": "Doces"
+    },
+    {
+      "id": 39,
+      "nome": "Bala Halls Extra Forte",
+      "marca": "Halls",
+      "peso": "27,5g",
+      "preco": 2.09,
+      "imagem": "imgdoces/halls_black.png",
+      "secao": "Doces"
+    },
+    {
+      "id": 40,
+      "nome": "Bala Halls Morango",
+      "marca": "Halls",
+      "peso": "28g",
+      "preco": 2.59,
+      "imagem": "imgdoces/halls_morango.png",
+      "secao": "Doces"
+    },
+    {
+      "id": 3001,
+      "nome": "Furadeira Elétrica",
+      "marca": "Furadeira elétrica 500W",
+      "peso": "",
+      "preco": 199.9,
+      "precoAntigo": 219.9,
+      "desconto": 10,
+      "imagem": "/original/ferramentas/imagens/furadeira.jpg",
+      "secao": "Ferramentas"
+    },
+    {
+      "id": 3002,
+      "nome": "Parafusadeira",
+      "marca": "Parafusadeira sem fio",
+      "peso": "",
+      "preco": 249.9,
+      "precoAntigo": 289.9,
+      "desconto": 15,
+      "imagem": "/original/ferramentas/imagens/parafusadeira.jpg",
+      "secao": "Ferramentas"
+    },
+    {
+      "id": 3003,
+      "nome": "Kit de Chaves",
+      "marca": "Kit com 20 peças",
+      "peso": "",
+      "preco": 89.9,
+      "precoAntigo": 109.9,
+      "desconto": 20,
+      "imagem": "/original/ferramentas/imagens/kit-chaves.jpg",
+      "secao": "Ferramentas"
+    },
+    {
+      "id": 3004,
+      "nome": "Alicate Universal",
+      "marca": "Alicate profissional",
+      "peso": "",
+      "preco": 52.9,
+      "precoAntigo": 59.9,
+      "desconto": 12,
+      "imagem": "/original/ferramentas/imagens/alicate.jpg",
+      "secao": "Ferramentas"
+    },
+    {
+      "id": 3005,
+      "nome": "Martelo",
+      "marca": "Martelo profissional",
+      "peso": "",
+      "preco": 40.9,
+      "precoAntigo": 49.9,
+      "desconto": 18,
+      "imagem": "/original/ferramentas/imagens/martelo.jpg",
+      "secao": "Ferramentas"
+    },
+    {
+      "id": 3006,
+      "nome": "Trena 5 metros",
+      "marca": "Trena profissional",
+      "peso": "",
+      "preco": 35.9,
+      "precoAntigo": 39.9,
+      "desconto": 10,
+      "imagem": "/original/ferramentas/imagens/trena.jpg",
+      "secao": "Ferramentas"
+    },
+    {
+      "id": 3007,
+      "nome": "Serra Circular",
+      "marca": "Serra circular 1200W",
+      "peso": "",
+      "preco": 413.9,
+      "precoAntigo": 449.9,
+      "desconto": 8,
+      "imagem": "/original/ferramentas/imagens/serra.jpg",
+      "secao": "Ferramentas"
+    },
+    {
+      "id": 3008,
+      "nome": "Nível Profissional",
+      "marca": "Nível de alumínio 60cm",
+      "peso": "",
+      "preco": 71.9,
+      "precoAntigo": 79.9,
+      "desconto": 10,
+      "imagem": "/original/ferramentas/imagens/nivel.jpg",
+      "secao": "Ferramentas"
+    },
+    {
+      "id": 3009,
+      "nome": "Chave Inglesa",
+      "marca": "Chave ajustável de 10 polegadas",
+      "peso": "",
+      "preco": 61.5,
+      "precoAntigo": 69.9,
+      "desconto": 12,
+      "imagem": "/original/ferramentas/imagens/chave-inglesa.jpg",
+      "secao": "Ferramentas"
+    },
+    {
+      "id": 3010,
+      "nome": "Kit de Ferramentas",
+      "marca": "Kit completo com 46 peças",
+      "peso": "",
+      "preco": 254.9,
+      "precoAntigo": 299.9,
+      "desconto": 15,
+      "imagem": "/original/ferramentas/imagens/kit-ferramentas.jpg",
+      "secao": "Ferramentas"
+    },
+    {
+      "id": 2001,
+      "nome": "Sabonete Líquido",
+      "marca": "Limpeza suave para as mãos e o corpo.",
+      "peso": "",
+      "preco": 9.9,
+      "imagem": "/original/higiene/img/sabonete_liquido.png",
+      "secao": "Higiene"
+    },
+    {
+      "id": 2002,
+      "nome": "Sabonete em Barra",
+      "marca": "Cuidado diário com fragrância agradável.",
+      "peso": "",
+      "preco": 4.49,
+      "imagem": "/original/higiene/img/sabonete_barra.png",
+      "secao": "Higiene"
+    },
+    {
+      "id": 2003,
+      "nome": "Shampoo Hidratante",
+      "marca": "Limpeza e hidratação para os cabelos.",
+      "peso": "",
+      "preco": 14.9,
+      "imagem": "/original/higiene/img/shampoo_hidratante.png",
+      "secao": "Higiene"
+    },
+    {
+      "id": 2004,
+      "nome": "Condicionador Hidratante",
+      "marca": "Ajuda a deixar os cabelos macios e fáceis de pentear.",
+      "peso": "",
+      "preco": 16.9,
+      "imagem": "/original/higiene/img/condicionador_hidratante.png",
+      "secao": "Higiene"
+    },
+    {
+      "id": 2005,
+      "nome": "Creme para Cabelos",
+      "marca": "Tratamento e cuidado para diferentes tipos de cabelo.",
+      "peso": "",
+      "preco": 12.9,
+      "imagem": "/original/higiene/img/creme_para_cabelos.jpg",
+      "secao": "Higiene"
+    },
+    {
+      "id": 2006,
+      "nome": "Desodorante Aerosol",
+      "marca": "Proteção e sensação de frescor durante o dia.",
+      "peso": "",
+      "preco": 11.9,
+      "imagem": "/original/higiene/img/desodorante_aerosol.png",
+      "secao": "Higiene"
+    },
+    {
+      "id": 2007,
+      "nome": "Desodorante Roll-on",
+      "marca": "Proteção prática para a rotina diária.",
+      "peso": "",
+      "preco": 10.49,
+      "imagem": "/original/higiene/img/desodorante_rollon.png",
+      "secao": "Higiene"
+    },
+    {
+      "id": 2008,
+      "nome": "Creme Dental",
+      "marca": "Higiene bucal para o cuidado diário dos dentes.",
+      "peso": "",
+      "preco": 7.99,
+      "imagem": "/original/higiene/img/creme_dental.png",
+      "secao": "Higiene"
+    },
+    {
+      "id": 2009,
+      "nome": "Escova de Dentes",
+      "marca": "Limpeza dos dentes para sua rotina de higiene bucal.",
+      "peso": "",
+      "preco": 9.9,
+      "imagem": "/original/higiene/img/escova_dental.png",
+      "secao": "Higiene"
+    },
+    {
+      "id": 2010,
+      "nome": "Enxaguante Bucal",
+      "marca": "Complemento para a rotina de higiene da boca.",
+      "peso": "",
+      "preco": 14.9,
+      "imagem": "/original/higiene/img/enxaguante_bucal.png",
+      "secao": "Higiene"
+    },
+    {
+      "id": 2011,
+      "nome": "Fio Dental",
+      "marca": "Auxilia na limpeza entre os dentes.",
+      "peso": "",
+      "preco": 6.49,
+      "imagem": "/original/higiene/img/fio_dental.png",
+      "secao": "Higiene"
+    },
+    {
+      "id": 2012,
+      "nome": "Papel Higiênico",
+      "marca": "Conforto e maciez para o dia a dia.",
+      "peso": "",
+      "preco": 18.9,
+      "imagem": "/original/higiene/img/papel_higienico.png",
+      "secao": "Higiene"
+    },
+    {
+      "id": 2013,
+      "nome": "Papel-Toalha",
+      "marca": "Praticidade para a cozinha e limpeza diária.",
+      "peso": "",
+      "preco": 8.49,
+      "imagem": "/original/higiene/img/papel_toalha.png",
+      "secao": "Higiene"
+    },
+    {
+      "id": 2014,
+      "nome": "Absorvente",
+      "marca": "Proteção e conforto para o período menstrual.",
+      "peso": "",
+      "preco": 12.9,
+      "imagem": "/original/higiene/img/absorvente.png",
+      "secao": "Higiene"
+    },
+    {
+      "id": 2015,
+      "nome": "Desinfetante Perfumado",
+      "marca": "Limpeza e fragrância agradável para os ambientes.",
+      "peso": "",
+      "preco": 7.49,
+      "imagem": "/original/higiene/img/desinfetante_perfumado.png",
+      "secao": "Higiene"
+    },
+    {
+      "id": 2016,
+      "nome": "Detergente Líquido",
+      "marca": "Remove gordura e sujeira de louças e utensílios.",
+      "peso": "",
+      "preco": 9.9,
+      "imagem": "/original/higiene/img/detergente_liquido.png",
+      "secao": "Higiene"
+    },
+    {
+      "id": 2017,
+      "nome": "Limpa-Vidros",
+      "marca": "Ajuda a limpar vidros e superfícies sem deixar resíduos.",
+      "peso": "",
+      "preco": 6.99,
+      "imagem": "/original/higiene/img/limpa_vidros.png",
+      "secao": "Higiene"
+    },
+    {
+      "id": 2018,
+      "nome": "Água Sanitária",
+      "marca": "Produto para limpeza e higienização de superfícies.",
+      "peso": "",
+      "preco": 5.49,
+      "imagem": "/original/higiene/img/agua_sanitaria.png",
+      "secao": "Higiene"
+    },
+    {
+      "id": 2019,
+      "nome": "Sabão em Pó",
+      "marca": "Limpeza eficiente para roupas do dia a dia.",
+      "peso": "",
+      "preco": 15.9,
+      "imagem": "/original/higiene/img/sabao_em_po.png",
+      "secao": "Higiene"
+    },
+    {
+      "id": 2020,
+      "nome": "Amaciante de Roupas",
+      "marca": "Deixa as roupas macias e perfumadas.",
+      "peso": "",
+      "preco": 17.9,
+      "imagem": "/original/higiene/img/amaciante.png",
+      "secao": "Higiene"
+    },
+    {
+      "id": 2021,
+      "nome": "Alvejante",
+      "marca": "Auxilia na limpeza e remoção de manchas das roupas.",
+      "peso": "",
+      "preco": 11.9,
+      "imagem": "/original/higiene/img/alvejante.png",
+      "secao": "Higiene"
+    },
+    {
+      "id": 2022,
+      "nome": "Esponja de Limpeza",
+      "marca": "Praticidade para lavar louças e superfícies.",
+      "peso": "",
+      "preco": 4.99,
+      "imagem": "/original/higiene/img/esponja_limpeza.png",
+      "secao": "Higiene"
+    },
+    {
+      "id": 2023,
+      "nome": "Sacos para Lixo",
+      "marca": "Opções para organizar e descartar resíduos.",
+      "peso": "",
+      "preco": 12.49,
+      "imagem": "/original/higiene/img/saco_lixo.png",
+      "secao": "Higiene"
+    },
+    {
+      "id": 2024,
+      "nome": "Luvas de Limpeza",
+      "marca": "Proteção para as mãos durante as tarefas domésticas.",
+      "peso": "",
+      "preco": 9.9,
+      "imagem": "/original/higiene/img/luva_limpeza.png",
+      "secao": "Higiene"
+    }
+  ],
+  "usuarios": [
+    {
+      "id": 1,
+      "nome": "Administrador",
+      "email": "adim@gmail.com",
+      "senha": "12345",
+      "perfil": "admin",
+      "criadoEm": "2026-11-22T00:00:00.000Z"
+    }
+  ],
+  "logins": []
+}

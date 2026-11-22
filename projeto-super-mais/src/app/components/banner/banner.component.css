@@ -1,0 +1,139 @@
+:host {
+    display: block;
+}
+
+/* =========================================
+   BANNER
+========================================= */
+.banner_principal {
+    max-width: 1500px;
+    margin: 20px auto 0;
+    padding: 0 20px;
+}
+
+.conteudo_banner_principal {
+    border-radius: 22px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+
+    padding: 40px 50px;
+    overflow: hidden;
+
+    background-size: cover;
+}
+
+/* Ajustes exclusivos do banner de Doces */
+.conteudo_banner_principal:not(.banner-categoria) {
+    background-position: center top;
+    background-size: cover;
+}
+
+.conteudo_banner_principal:not(.banner-categoria) .botao_banner {
+    background-color: #b4545d;
+}
+
+/* Descer o texto somente no banner de Doces */
+.conteudo_banner_principal:not(.banner-categoria) .texto_banner_principal {
+    transform: translateY(35px);
+}
+
+.texto_banner_principal {
+    max-width: 420px;
+}
+
+.texto_banner_principal h1 {
+    font-size: 40px;
+    margin-bottom: 14px;
+    padding-top: 70px;
+    padding-left: 25px;
+}
+
+.texto_banner_principal p {
+    color: #4A555C;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 22px;
+    padding-left: 25px;
+}
+
+.botao_banner {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+
+    margin-left: 25px;
+
+    background: #226B65;
+    color: #fff;
+
+    padding: 13px 24px;
+    border-radius: 30px;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    transition: 0.2s;
+}
+
+.botao_banner:hover {
+    background: #1B544F;
+}
+
+.imagem_banner_principal {
+    flex-shrink: 0;
+    width: 380px;
+    height: 220px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imagem_banner_principal img {
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* =========================================
+   RESPONSIVO
+========================================= */
+@media (max-width: 900px) {
+    .conteudo_banner_principal {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .texto_banner_principal {
+        max-width: 100%;
+    }
+}
+
+/* Keep the category artwork visible without cropping it; Doces keeps its original full banner. */
+.conteudo_banner_principal.banner-categoria{min-height:330px;background-size:auto 88%;background-position:right 7% center;background-repeat:no-repeat;background-color:#edf5f1;}
+.banner-categoria .texto_banner_principal h1{padding-top:0;}
+@media(max-width:700px){.conteudo_banner_principal.banner-categoria{background-size:auto 55%;background-position:right bottom;min-height:350px;padding:24px;}.banner-categoria .texto_banner_principal{align-self:flex-start;}}
+
+
+/* Round 4 — mesma caixa e alinhamento visual em todas as categorias. */
+.banner_principal {max-width: 1640px; margin: 20px auto 0; padding: 0 32px;}
+.conteudo_banner_principal {min-height: 348px; height: 348px; padding: 40px 56px; background-position: center; background-repeat: no-repeat;}
+.conteudo_banner_principal.banner-categoria {min-height: 348px; height: 348px; background-size: auto 88%; background-position: right 5% center; background-color: #edf5f1;}
+.texto_banner_principal h1, .banner-categoria .texto_banner_principal h1 {padding: 0; margin: 0 0 14px;}
+.texto_banner_principal p {padding: 0; margin: 0 0 22px;}
+.botao_banner {margin-left: 0;}
+@media(max-width: 900px) {
+ .banner_principal {padding: 0 18px;}
+ .conteudo_banner_principal, .conteudo_banner_principal.banner-categoria {height: auto; min-height: 330px; padding: 32px;}
+ .conteudo_banner_principal.banner-categoria {background-size: auto 65%; background-position: right bottom;}
+ .texto_banner_principal {align-self: flex-start; text-align: left;}
+}
+@media(max-width: 600px) {
+ .conteudo_banner_principal, .conteudo_banner_principal.banner-categoria {min-height: 350px; padding: 25px;}
+ .conteudo_banner_principal.banner-categoria {background-size: auto 48%; background-position: right bottom;}
+ .texto_banner_principal h1 {font-size: 30px;}
+ .texto_banner_principal p {font-size: 13px; max-width: 250px;}
+}
+

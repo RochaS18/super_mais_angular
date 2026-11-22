@@ -1,0 +1,89 @@
+
+<section class="header">
+
+  <a routerLink="/" class="logo">
+    <img src="/original/imagem/logo.png" alt="Super Mais">
+  </a>
+
+  <div class="search-box">
+    <form (submit)="pesquisar($event, campoPesquisa.value)">
+
+      <input
+        #campoPesquisa
+        type="search"
+        placeholder="O que você procura hoje?"
+        aria-label="Pesquisar produtos"
+        (input)="pesquisar($event, campoPesquisa.value)"
+      >
+
+      <button type="submit" aria-label="Pesquisar">
+        <img
+          src="/original/icone/pesquisa_icone.png"
+          alt="Pesquisar"
+        >
+      </button>
+
+    </form>
+  </div>
+
+  <div class="user-area">
+
+    <a
+      href="#"
+      class="user-card"
+      id="login-trigger"
+      (click)="acaoUsuario($event)"
+    >
+
+      <div class="user-icon">
+        <img
+          src="/original/icone/perfil_icone.png"
+          alt=""
+          aria-hidden="true"
+        >
+      </div>
+
+      <div class="user-text">
+        @if (usuario()) {
+          <strong>Olá, {{ primeiroNome() }}</strong>
+          <span>Sair</span>
+        } @else {
+          <strong>Olá, Cliente</strong>
+          <span>Entre ou cadastre-se</span>
+        }
+      </div>
+
+    </a>
+
+    @if (ehAdmin()) {
+      <a routerLink="/administracao" class="user-card">
+        <div class="user-text">
+          <strong>Painel</strong>
+          <span>Administração</span>
+        </div>
+      </a>
+    }
+
+    <a routerLink="/carrinho" class="cart-card">
+
+      <div class="cart-icon">
+        <img
+          src="/original/icone/carrinho_icone.png"
+          alt=""
+          aria-hidden="true"
+        >
+        <span class="cart-count">{{ quantidadeCarrinho() }}</span>
+      </div>
+
+      <div class="cart-text">
+        <strong>Meu carrinho</strong>
+        <span>
+          {{ totalCarrinho() | currency:'BRL':'symbol':'1.2-2' }}
+        </span>
+      </div>
+
+    </a>
+
+  </div>
+
+</section>

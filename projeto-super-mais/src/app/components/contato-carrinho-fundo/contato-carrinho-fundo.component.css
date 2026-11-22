@@ -1,0 +1,107 @@
+.carrinho-fundo {
+    position: fixed;
+    inset: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: flex-end;
+    background: rgba(18, 37, 45, 0.45);
+}
+.carrinho-fundo[hidden] {
+    display: none;
+}
+.carrinho-popup {
+    position: relative;
+    width: min(380px, 100%);
+    min-height: 100%;
+    padding: 28px 24px;
+    background: white;
+    box-shadow: -8px 0 24px rgba(0, 0, 0, 0.12);
+}
+.carrinho-popup h2 {
+    margin: 0 0 24px;
+    color: var(--texto);
+}
+.fechar-carrinho {
+    position: absolute;
+    top: 18px;
+    right: 20px;
+    border: 0;
+    color: var(--texto-secundario);
+    background: transparent;
+    cursor: pointer;
+    font-size: 28px;
+    line-height: 1;
+}
+.carrinho-vazio {
+    padding: 20px 0;
+    color: var(--texto-secundario);
+}
+.cupom-carrinho {
+    margin-top: 20px;
+}
+.cupom-carrinho label {
+    display: block;
+    margin-bottom: 6px;
+    color: var(--texto-secundario);
+    font-size: 12px;
+}
+.cupom-carrinho>div {
+    display: flex;
+    gap: 6px;
+}
+.cupom-carrinho input {
+    min-width: 0;
+    flex: 1;
+    padding: 9px;
+    border: 1px solid var(--borda);
+    border-radius: 6px;
+    outline: 0;
+}
+.cupom-carrinho input:focus {
+    border-color: var(--verde);
+}
+.cupom-carrinho button {
+    padding: 0 12px;
+    border: 0;
+    border-radius: 6px;
+    color: white;
+    background: var(--azul);
+    cursor: pointer;
+    font-size: 12px;
+}
+.cupom-carrinho small {
+    display: block;
+    margin-top: 6px;
+    font-size: 11px;
+}
+.resumo-carrinho {
+    margin-top: 18px;
+}
+.resumo-carrinho>p {
+    margin: 6px 0;
+    display: flex;
+    justify-content: space-between;
+    color: var(--texto-secundario);
+    font-size: 13px;
+}
+.total-carrinho {
+    margin-top: 12px;
+    padding-top: 16px;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid var(--borda);
+}
+.finalizar-carrinho {
+    width: 100%;
+    margin-top: 20px;
+    padding: 12px;
+    border: 0;
+    border-radius: 20px;
+    color: white;
+    background: var(--verde);
+    cursor: pointer;
+    font-weight: bold;
+}
+.finalizar-carrinho:hover {
+    background: var(--verde-escuro);
+}

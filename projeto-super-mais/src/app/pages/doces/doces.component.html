@@ -1,0 +1,21 @@
+
+<app-barra-superior />
+
+<app-cabecalho (buscaAlterada)="pesquisar($event)" />
+
+<app-menu />
+
+<app-banner
+  titulo="Doces"
+  descricao="Tudo o que você precisa, com qualidade, variedade e os melhores preços para o seu dia a dia."
+  imagemFundo="imgdoces/banner_doces_atualizado.png"
+  corTitulo="#572B23"
+/>
+
+<app-secao-produtos
+  titulo="Doces"
+  categoria="doces"
+  [produtos]="produtosFiltrados()"
+/>
+
+<app-rodape />

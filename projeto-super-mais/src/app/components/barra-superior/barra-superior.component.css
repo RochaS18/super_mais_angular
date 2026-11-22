@@ -1,0 +1,64 @@
+:host {
+    display: block;
+}
+
+/* =========================================
+   BARRA SUPERIOR
+========================================= */
+.top-bar {
+    min-height: 40px;
+
+    background: linear-gradient(90deg, #101D28, #142433, #1A2028);
+    color: rgba(255, 255, 255, 0.88);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 50px;
+    font-size: 14px;
+}
+
+.shipping-info,
+.top-links,
+.top-links a {
+    display: flex;
+    align-items: center;
+}
+
+.shipping-info {
+    gap: 10px;
+}
+
+.shipping-info strong {
+    color: #F3C257;
+    font-weight: 700;
+}
+
+.top-icon {
+    width: 18px;
+    height: 18px;
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+}
+
+.top-icon img,
+.inline-icon {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+}
+
+.top-links {
+    gap: 40px;
+}
+
+.top-links a {
+    gap: 8px;
+    transition: 0.25s;
+}
+
+.top-links a:hover {
+    color: #F3C257;
+}
